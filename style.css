@@ -1,0 +1,45 @@
+/* Variables */
+
+:root {
+  --main-color: #e83232;
+  --primary-font: 'Inter', sans-serif;
+  --secondary-font: 'DM Sans', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 38px 80px;
+}
+
+.logo {
+  font-size: 40px;
+  color: var(--main-color);
+}
+     
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 56px;
+}
+
+.menu ul > li {
+  font-size: 18px;
+
+}
+
+h1 {
+  font-size: 72px;
+  color: var(--main-color);
+}
+
+span {
+  font-family: var(--secondary-font);
+  font-size: 32px;
+  color: #fff;
+}
