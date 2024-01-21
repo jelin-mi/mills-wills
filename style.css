@@ -2,44 +2,167 @@
 
 :root {
   --main-color: #e83232;
-  --primary-font: 'Inter', sans-serif;
-  --secondary-font: 'DM Sans', sans-serif;
+  --primary-font: "Inter", sans-serif;
+  --secondary-font: "DM Sans", sans-serif;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+dl,
+dd,
+dt,
+figure,
+figcaption,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styling */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reset box sizing */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
   font-family: var(--primary-font);
 }
 
-header {
+/* Header */
+
+header,
+footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 38px 80px;
+  font-weight: 700;
+  padding: 20px 80px;
+  align-items: center;
 }
 
-.logo {
-  font-size: 40px;
+header .logo {
+  font-size: 30px;
   color: var(--main-color);
 }
-     
-.menu ul {
-  list-style: none;
+
+header .menu ul,
+footer .legal-links ul {
   display: flex;
   gap: 56px;
+  font-weight: 600;
 }
 
-.menu ul > li {
+header .menu ul > li {
   font-size: 18px;
-
 }
 
-h1 {
+footer {
+  background-color: #000;
+}
+
+footer .logo-footer {
+  font-size: 30px;
+  color: #fff;
+}
+
+footer .legal-links {
+  color: #fff;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  max-height: 636px;
+}
+
+.hero .text {
+  background-color: #000;
+  padding: 80px;
+  width: 45%;
+}
+
+.hero .text h1 {
   font-size: 72px;
   color: var(--main-color);
+  margin-bottom: 25px;
+  line-height: 68px;
 }
 
-span {
+.hero .text span {
   font-family: var(--secondary-font);
   font-size: 32px;
   color: #fff;
+  font-weight: 700;
+}
+
+.hero .text p {
+  font-family: var(--secondary-font);
+  font-size: 14px;
+  color: #fff;
+  line-height: 21px;
+  margin-top: 25px;
+}
+
+.hero .picture {
+  width: 55%;
+}
+
+.hero .picture img {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Content */
+
+.content {
+  margin-bottom: 120px;
+}
+
+.content h2 {
+  text-align: center;
+  font-size: 52px;
+  margin: 60px;
+}
+
+.content .articles {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.content .articles article {
+  max-width: 500px;
+}
+
+.content .articles article img {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  max-height: 300px;
+}
+
+.content .articles article h3 {
+  font-size: 28px;
+  color: var(--main-color);
+}
+
+.content .articles article p {
+  font-size: 16px;
 }
