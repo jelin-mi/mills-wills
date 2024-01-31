@@ -140,7 +140,9 @@ footer .legal-links {
 /* Content */
 
 .content {
-  margin-bottom: 120px;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto 120px;
 }
 
 .content h2 {
@@ -153,12 +155,20 @@ footer .legal-links {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 20px;
+  gap: 20px 20px;
   justify-content: center;
 }
 
 .content .articles article {
-  max-width: 500px;
+  max-width: calc(50% - 10px);
+  width: 100%;
+}
+
+/* Esto no va, fucking shit!! */
+.content .articles article .article-image:hover {
+  border: 5px solid green;
+  mix-blend-mode: multiply;
+  background-color: rgba(232, 50, 50, 0.6);
 }
 
 .content .articles article img {
@@ -171,6 +181,7 @@ footer .legal-links {
 .content .articles article h3 {
   font-size: 28px;
   color: var(--main-color);
+  margin-top: 14px;
 }
 
 .content .articles article p {
